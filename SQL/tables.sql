@@ -6,11 +6,13 @@ DROP TABLE IF EXISTS title_episode;
 DROP TABLE IF EXISTS title_principals;
 DROP TABLE IF EXISTS title_ratings;
 DROP TABLE IF EXISTS title_episode;
+
 /*
-Para insertar los archivos se ha utilizado el comando \copy actor_basics FROM 'path' WITH (FORMAT text, DELIMITER E'\t', HEADER);
-El intento inicial de hacerlo cambiando el formato primero a csv generaba problemas con la codificación generando caracteres
-incorrectamente codificados. En el caso de necesitar los datos en un excel, se podrá realizar la exportación a posteriori.
+To insert the files, the \copy command was used: \copy actor_basics FROM 'path' WITH (FORMAT text, DELIMITER E'\t', HEADER);
+The initial attempt to do it by first converting the format to CSV caused encoding issues, resulting in incorrectly encoded characters. 
+If the data is needed in Excel, it can be exported later.
 */
+
 CREATE TABLE actor_basics(
 	actor_id VARCHAR,
 	nombre VARCHAR,

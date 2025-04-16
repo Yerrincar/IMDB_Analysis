@@ -1,6 +1,8 @@
 /*
-Algunas columnas de ciertas tablas tienen el valor \N que puede indicar que una película aún no tiene fecha de finalización, que un corto no tiene escritores y solo director que hace todo o simplemente
-son valores nulos. Por el momento para insertar los datos vamos a cambiar ciertos tipos a VARCHAR para poder tener todo y ya luego decidir que hacer con este tipo de valores
+Some columns in certain tables contain the value \N, which may indicate that a movie doesn't yet have an end date, 
+a short film has no writers and only a director who does everything, or simply represent null values. 
+For now, in order to insert the data, we will change certain types to VARCHAR to keep everything, 
+and later decide what to do with this kind of values.
 */
 ALTER TABLE title_basics
   ALTER COLUMN endYear
